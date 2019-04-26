@@ -87,6 +87,10 @@ class Pix2PixModel(BaseModel):
         """Run forward pass; called by both functions <optimize_parameters> and <test>."""
         self.fake_B = self.netG(self.real_A)  # G(A)
 
+    def forward_single(self, img):
+        """Run forward pass; called by both functions <optimize_parameters> and <test>."""
+        return self.netG(img)  # G(A)
+
     def backward_D(self):
         """Calculate GAN loss for the discriminator"""
         # Fake; stop backprop to the generator by detaching fake_B
