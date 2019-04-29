@@ -1,0 +1,1 @@
+python train.py --dataroot ./datasets/v2_vanilla_order/A --name flare_v2_vanilla_order --model pix2pix --direction AtoB --gpu_ids 0,1
